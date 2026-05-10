@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mellcognitivearchitecture.com.br/sitemap.xml
