@@ -178,7 +178,7 @@ A **MeLL Cognitive Architecture** organiza iniciativas de IA aplicada, assistent
 | **SovereignGuard CIA-Tec™** | Governança ativa | Proposta de middleware de governança ativa e cartório digital para IA, concebido como camada de segurança, evidência e controle entre sistemas inteligentes, plataformas corporativas e ambientes críticos. |
 | **Chat IA — Manutenção Elétrica Industrial™** | Manutenção Industrial | Assistente técnico inteligente especializado em Manutenção Elétrica Industrial. Auxilia em diagnósticos teóricos, análise de falhas, confiabilidade, PCM, automação e energia, com segurança, linguagem clara e apoio prático para o dia a dia no chão de fábrica. |
 | **Calculú — Energia Simples™** | Energia | Assistente brasileiro que simplifica a conta de luz, identifica desperdícios de energia e estima economia com explicações claras e práticas. |
-| **Assistente didático de Instrumentação Industrial** | Instrumentação Industrial | Assistente técnico-didático para aprendizagem continuada em Instrumentação Industrial e Controle de Processos, com explicações claras, exemplos práticos e orientação estruturada do nível básico ao avançado. |
+| **Especialista técnico didático colaborativa** | Instrumentação Industrial | Suporte e assistência técnica com explicações claras, orientação em documentação, configuração, instalação, exemplos e testes práticos, visando reduzir paradas, aumentar a produtividade, otimizar processos e garantir máxima segurança. |
 
 ---
 
