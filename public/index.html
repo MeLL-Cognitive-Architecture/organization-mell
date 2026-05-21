@@ -50,7 +50,6 @@
       --bg-soft: #07111f;
       --panel: #101827;
       --panel-2: #0c1423;
-      --panel-3: #0b1728;
       --border: #223047;
       --border-soft: rgba(148, 163, 184, 0.18);
       --text: #f4f7fb;
@@ -425,7 +424,7 @@
 
     .gatekeeper-card {
       width: 100%;
-      max-width: 500px;
+      max-width: 560px;
       padding: 20px;
       border-radius: 8px;
       border: 1px solid #00ff00;
@@ -435,6 +434,11 @@
       box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
       text-align: left;
       line-height: 1.5;
+    }
+
+    .gatekeeper-card.is-degraded {
+      border-color: var(--danger);
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.16);
     }
 
     .gatekeeper-head {
@@ -468,6 +472,14 @@
 
     .gatekeeper-value {
       color: #00ff00;
+    }
+
+    .gatekeeper-value.danger {
+      color: var(--danger);
+    }
+
+    .gatekeeper-value.warning {
+      color: var(--warning);
     }
 
     @keyframes gk-blink {
@@ -510,14 +522,6 @@
       font-size: 15px;
     }
 
-    .notice {
-      border: 1px solid rgba(245, 158, 11, 0.28);
-      background: rgba(245, 158, 11, 0.08);
-      border-radius: 22px;
-      padding: 22px;
-      color: #fcd9a0;
-    }
-
     .link-card a,
     .footer a {
       color: var(--accent-2);
@@ -544,38 +548,12 @@
       overflow: hidden;
     }
 
-    .contact-card h3,
-    .contact-card p,
-    .contact-card ul {
-      max-width: 100%;
-      overflow-wrap: anywhere;
-      word-break: normal;
-    }
-
-    .contact-list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .contact-list li {
-      margin: 0 0 6px;
-    }
-
-    .contact-list li:last-child {
-      margin-bottom: 0;
-    }
-
     .click-card {
       color: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       min-height: 100%;
-    }
-
-    .click-card:hover {
-      text-decoration: none;
     }
 
     .icon-row {
@@ -627,13 +605,6 @@
       gap: 18px;
       flex-wrap: wrap;
       align-items: center;
-    }
-
-    .footer-links {
-      display: inline-flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
     }
 
     .to-top {
@@ -779,12 +750,12 @@
           <div class="status-list">
             <div class="status-item">
               <span>Portal institucional</span>
-              <strong>Online</strong>
+              <strong id="portal-status">Online</strong>
             </div>
 
             <div class="status-item">
-              <span>API local</span>
-              <strong id="api-status">Verificando...</strong>
+              <span>Gatekeeper Sentinel</span>
+              <strong id="sentinel-status">Verificando...</strong>
             </div>
 
             <div class="status-item">
@@ -807,8 +778,8 @@
           <h2 id="showcase-title">Governança em Tempo Real</h2>
           <p>
             O <strong>MeLL Gatekeeper</strong> é um sentinela serverless desenvolvido em <strong>Python</strong> e hospedado no
-            <strong>Google Cloud</strong>. Ele audita cada interação no portal, garantindo integridade e conformidade por meio
-            de uma arquitetura modular.
+            <strong>Google Cloud</strong>. Ele audita interações no portal, registra eventos técnicos e expõe um estado operacional
+            rastreável para a camada pública.
           </p>
         </div>
 
@@ -824,21 +795,29 @@
         <div class="showcase-card-wrap">
           <div class="gatekeeper-card" data-gk-card>
             <div class="gatekeeper-head">
-              <span>&gt; MELL_GATEKEEPER_SENTINEL_v1.0</span>
-              <span class="gatekeeper-blink" aria-hidden="true">●</span>
+              <span>&gt; MELL_GATEKEEPER_SENTINEL_v1.2.1</span>
+              <span class="gatekeeper-blink" aria-hidden="true" data-gk-led>●</span>
             </div>
 
             <p class="gatekeeper-insight" data-gk-insight>
-              &gt; Analisando governança cognitiva...
+              &gt; Sincronizando governança cognitiva...
             </p>
 
             <div class="gatekeeper-meta">
+              STATUS:
+              <span class="gatekeeper-value warning" data-gk-status>VERIFICANDO</span><br />
+
               EVENTOS AUDITADOS:
               <span class="gatekeeper-value" data-gk-total>0</span><br />
-              SISTEMA:
-              <span class="gatekeeper-value">ONLINE</span><br />
+
               INFRAESTRUTURA:
-              <span class="gatekeeper-value" data-gk-region>---</span>
+              <span class="gatekeeper-value" data-gk-region>---</span><br />
+
+              HANDSHAKE:
+              <span class="gatekeeper-value" data-gk-handshake>---</span><br />
+
+              ÚLTIMA SINCRONIZAÇÃO:
+              <span class="gatekeeper-value" data-gk-timestamp>---</span>
             </div>
           </div>
         </div>
@@ -871,9 +850,8 @@
             <span class="tag">Aplicação</span>
             <h3>Ambientes críticos e regulamentados</h3>
             <p>
-              Nosso trabalho é orientado a organizações que operam em contextos de alto impacto, onde falhas podem
-              gerar perda financeira, indisponibilidade operacional, risco à segurança, exposição de dados ou não
-              conformidade.
+              Nosso trabalho é orientado a organizações que operam em contextos de alto impacto, onde falhas podem gerar
+              perda financeira, indisponibilidade operacional, risco à segurança, exposição de dados ou não conformidade.
             </p>
           </article>
 
@@ -881,8 +859,8 @@
             <span class="tag">Governança</span>
             <h3>Decisão humana soberana</h3>
             <p>
-              A IA atua como camada de apoio cognitivo: analisa, organiza, recomenda e identifica riscos. Decisões
-              críticas, autorizações, exceções e mudanças estruturais permanecem sob responsabilidade humana explícita.
+              A IA atua como camada de apoio cognitivo: analisa, organiza, recomenda e identifica riscos. Decisões críticas,
+              autorizações, exceções e mudanças estruturais permanecem sob responsabilidade humana explícita.
             </p>
           </article>
 
@@ -890,8 +868,8 @@
             <span class="tag">Rastreabilidade</span>
             <h3>Inteligência operacional auditável</h3>
             <p>
-              A governança não pode ser uma caixa preta. A MeLL adota princípios de registro, evidência, validação
-              e confirmação para apoiar decisões mais seguras, transparentes e tecnicamente justificáveis.
+              A governança não pode ser caixa preta. A MeLL adota princípios de registro, evidência, validação e confirmação
+              para apoiar decisões mais seguras, transparentes e tecnicamente justificáveis.
             </p>
           </article>
         </div>
@@ -904,9 +882,7 @@
           <h2>Governança Cognitiva Federada</h2>
           <p>
             Governar processos cognitivos assistidos por IA, com controles proporcionais ao risco, métricas de aderência,
-            rastreabilidade integral, autonomia supervisionada, segurança cognitiva e soberania humana. Sua finalidade é
-            assegurar que a IA possa ampliar capacidade analítica e operacional sem converter cognição automatizada em
-            autoridade decisória, efeito institucional ou mudança estrutural sem confirmação humana explícita.
+            rastreabilidade integral, autonomia supervisionada, segurança cognitiva e soberania humana.
           </p>
         </div>
 
@@ -933,7 +909,7 @@
 
           <article class="card">
             <h3>Integridade documental</h3>
-            <p>Conteúdos devem ser classificados, versionados e tratados conforme seu efeito formal e seu grau de validade.</p>
+            <p>Conteúdos devem ser classificados, versionados e tratados conforme seu efeito formal e grau de validade.</p>
           </article>
 
           <article class="card">
@@ -955,21 +931,6 @@
             <h3>Observabilidade e auditoria</h3>
             <p>A arquitetura deve permitir análise contínua de eventos, recomendações, riscos, decisões e evidências.</p>
           </article>
-
-          <article class="card">
-            <h3>Evolução controlada</h3>
-            <p>Mudanças estruturais exigem cut-off, escopo, avaliação de impacto e aprovação humana explícita.</p>
-          </article>
-
-          <article class="card">
-            <h3>Conformidade e transparência</h3>
-            <p>A arquitetura deve apoiar aderência a políticas, normas, requisitos regulatórios e boas práticas.</p>
-          </article>
-
-          <article class="card">
-            <h3>Desenvolvimento sustentável</h3>
-            <p>Promover decisões sustentáveis, otimizar recursos, reduzir impactos ambientais e preservar a segurança.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -977,10 +938,9 @@
     <section id="processo">
       <div class="container">
         <div class="section-title">
-          <h2>Regra de decisão soberania governada</h2>
+          <h2>Regra de decisão: soberania governada</h2>
           <p>
-            Fluxo operacional: sem confirmação humana explícita, a saída permanece consultiva e não produz efeito
-            institucional governado.
+            Fluxo operacional: sem confirmação humana explícita, a saída permanece consultiva e não produz efeito institucional governado.
           </p>
         </div>
 
@@ -1015,11 +975,10 @@
     <section id="pilares">
       <div class="container">
         <div class="section-title">
-          <h2>Governança cognitiva federada</h2>
+          <h2>Pilares operacionais</h2>
           <p>
-            Voltado à prevenção, redução, controle e rastreabilidade de riscos organizacionais, técnicos, ambientais,
-            ocupacionais, regulatórios e institucionais, integrando SGI, ESG, SSMA, Compliance, segurança cognitiva,
-            autonomia supervisionada e soberania humana explícita sobre decisões críticas.
+            Estrutura voltada à prevenção, redução, controle e rastreabilidade de riscos organizacionais, técnicos,
+            ambientais, ocupacionais, regulatórios e institucionais.
           </p>
         </div>
 
@@ -1062,9 +1021,8 @@
         <div class="section-title">
           <h2>Governança Cognitiva Corporativa</h2>
           <p>
-            Iniciativas e soluções estratégicas de governança para Indústria 4.0, Setor Financeiro, ambientes críticos
-            e decisórios, módulos conceituais voltados à aplicação prática de inteligência cognitiva, agentes especialistas
-            governados com interceptação cognitiva, selagem, imutabilidade semântica e soberania operacional.
+            Iniciativas e soluções estratégicas de governança para Indústria 4.0, setor financeiro, ambientes críticos
+            e decisórios, módulos conceituais e agentes especialistas governados.
           </p>
         </div>
 
@@ -1073,9 +1031,8 @@
             <span class="tag">Arquitetura</span>
             <h3>CIA-Tec</h3>
             <p>
-              Cognitive Intelligence Architecture — Technology, arquitetura federada de governança cognitiva, orientada
-              à autonomia supervisionada, rastreabilidade, hierarquia documental, segurança cognitiva, DataCore, núcleos
-              funcionais e soberania humana.
+              Cognitive Intelligence Architecture — Technology, arquitetura federada de governança cognitiva orientada à
+              autonomia supervisionada, rastreabilidade, segurança cognitiva e soberania humana.
             </p>
           </article>
 
@@ -1083,8 +1040,8 @@
             <span class="tag">Industrial AI</span>
             <h3>ERSC-Core — CIA-Tec</h3>
             <p>
-              Solução conceitual de IA industrial para governança federada de incidentes, fluxos operacionais, integrações,
-              evidências, recomendações, classificação de riscos e execução supervisionada em ambientes técnicos.
+              Solução conceitual de IA industrial para governança federada de incidentes, fluxos operacionais, evidências,
+              recomendações, classificação de riscos e execução supervisionada.
             </p>
           </article>
 
@@ -1092,9 +1049,8 @@
             <span class="tag">Governança ativa</span>
             <h3>SCGA-Core — CIA-Tec</h3>
             <p>
-              Sovereign Cognitive Governance Architecture, componente de segurança para uma camada estratégica de governança
-              corporativa. Esta arquitetura é desenhada para garantir que a autonomia da inteligência artificial em ambientes
-              críticos, como Indústria 4.0 e Setor Financeiro, seja sempre mediada pela soberania humana e ética.
+              Arquitetura para garantir que a autonomia da inteligência artificial em ambientes críticos seja mediada por
+              soberania humana, ética, registro, contenção e rastreabilidade.
             </p>
           </article>
 
@@ -1102,9 +1058,8 @@
             <span class="tag">Manutenção Industrial</span>
             <h3>Chat I.A 🔧 Manutenção Elétrica Industrial</h3>
             <p>
-              Assistente técnico inteligente especializado em Manutenção Elétrica Industrial. Auxilia em diagnósticos teóricos,
-              análise de falhas, confiabilidade, PCM, automação e energia, com segurança, linguagem clara e apoio prático
-              para o dia a dia no chão de fábrica.
+              Assistente técnico especializado em manutenção elétrica industrial, diagnóstico teórico, confiabilidade,
+              PCM, automação e energia.
             </p>
           </article>
 
@@ -1119,8 +1074,7 @@
               <span class="tag">Energia</span>
               <h3>CalcuLú 💡 Energia Simples</h3>
               <p>
-                Assistente brasileiro que simplifica sua conta de luz, mostra onde a energia está sendo desperdiçada
-                e estima economia com explicações claras e práticas, ajudando a pagar menos e ter mais controle dos gastos.
+                Assistente brasileiro que simplifica a conta de luz, mostra desperdícios e estima economia com linguagem clara.
               </p>
             </div>
             <p class="icon-row">
@@ -1132,9 +1086,7 @@
             <span class="tag">Instrumentação Industrial</span>
             <h3>Especialista técnico colaborativo</h3>
             <p>
-              Suporte e assistência técnica governada em Instrumentação Industrial, com explicações claras, orientação
-              em documentação, configuração, instalação, exemplos e testes práticos, visando reduzir paradas, aumentar
-              a produtividade, otimizar processos e garantir máxima segurança.
+              Suporte técnico governado em instrumentação industrial, documentação, configuração, instalação, exemplos e testes práticos.
             </p>
           </article>
         </div>
@@ -1146,8 +1098,7 @@
         <div class="section-title">
           <h2>Presença Digital</h2>
           <p>
-            Relacionamento, divulgação e atualização de conteúdos destinados a proporcionar valor à marca, identidade visual,
-            responsabilidade social e evolutivo contínuo por meio de documentação técnica, demonstrações, redes e canais oficiais.
+            Relacionamento, documentação técnica, demonstrações, redes e canais oficiais da MeLL Cognitive Architecture.
           </p>
         </div>
 
@@ -1163,11 +1114,10 @@
               <span class="tag">Governança e Segurança</span>
               <h3>Site Institucional</h3>
               <p>
-                Estrutura documental, IA responsável, compliance e auditoria, trilha imutável, contenção cognitiva,
-                gestão de riscos, segurança da informação, privacidade, LGPD e conformidade regulatória.
+                Estrutura documental, IA responsável, compliance, auditoria, trilha imutável, gestão de riscos,
+                segurança da informação, privacidade, LGPD e conformidade regulatória.
               </p>
             </div>
-
             <p class="icon-row">
               <span class="icon-link" aria-hidden="true">↗</span>
             </p>
@@ -1178,8 +1128,7 @@
               <span class="tag">GitHub</span>
               <h3>Documentação Técnica</h3>
               <p>
-                Organização técnica para documentação pública, exemplos, demonstrações não sensíveis, templates e evolução
-                controlada da presença open source da MeLL Cognitive Architecture.
+                Organização técnica para documentação pública, exemplos, demonstrações não sensíveis, templates e evolução controlada.
               </p>
             </div>
 
@@ -1191,14 +1140,7 @@
                 rel="noopener noreferrer"
                 aria-label="Abrir GitHub MeLL Cognitive Architecture"
               >
-                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 .8a11.2 11.2 0 0 0-3.54 21.82c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.35-3.79-1.35-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 .1.13 2.63 1.82 3.27.78.09-.72.39-1.11.71-1.35-2.5-.28-5.13-1.25-5.13-5.54 0-1.22.44-2.22 1.16-3-.12-.29-.5-1.5.11-3.13 0 0 .95-.3 3.1 1.15a10.7 10.7 0 0 1 5.65 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.63.23 2.84.11 3.13.72.78 1.16 1.78 1.16 3 0 4.3-2.63 5.25-5.14 5.53.41.35.77 1.03.77 2.08v3.08c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"
-                  />
-                </svg>
-                <span class="sr-only">GitHub</span>
+                ↗
               </a>
             </p>
           </article>
@@ -1208,11 +1150,7 @@
               <span class="tag">LinkedIn</span>
               <h3>Carreira Profissional</h3>
               <p>
-                Idealizador, Criador, Fundador, Arquiteto, Desenvolvedor, Orquestrador, Visionário.
-              </p>
-              <p>
-                Manutenção Elétrica Industrial — Automação — Indústria 4.0 — Internet das Coisas (IoT) —
-                Confiabilidade e Segurança Operacional.
+                Manutenção Elétrica Industrial — Automação — Indústria 4.0 — IoT — Confiabilidade e Segurança Operacional.
               </p>
             </div>
 
@@ -1224,10 +1162,7 @@
                 rel="noopener noreferrer"
                 aria-label="Abrir LinkedIn de Luiz Carlos Rezende da Silva"
               >
-                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.41v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.4a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.05H3.56V8.98h3.56v11.47ZM22.23 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.74V1.74C24 .78 23.2 0 22.23 0Z"/>
-                </svg>
-                <span class="sr-only">LinkedIn</span>
+                ↗
               </a>
             </p>
           </article>
@@ -1239,96 +1174,206 @@
   <footer class="footer">
     <div class="container footer-row">
       <span>© 2026 MeLL Cognitive Architecture. Todos os direitos reservados.</span>
-      <span class="footer-links">
-        <span>IA aplicada · Governança cognitiva · Autonomia supervisionada</span>
-      </span>
+      <span>IA aplicada · Governança cognitiva · Autonomia supervisionada</span>
     </div>
   </footer>
 
   <a class="to-top" href="#topo" aria-label="Voltar ao topo">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+    ↑
     <span class="sr-only">Voltar ao topo</span>
   </a>
 
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      const statusElement = document.getElementById("api-status");
+      const GATEKEEPER_ENDPOINT = "https://us-central1-mell-gatekeeper-prod.cloudfunctions.net/gatekeeper-cia-tec";
 
-      try {
-        const response = await fetch("/health", { cache: "no-store" });
-
-        if (statusElement) {
-          if (response.ok) {
-            statusElement.textContent = "Online";
-            statusElement.style.color = "var(--success)";
-          } else {
-            statusElement.textContent = "Instável";
-            statusElement.style.color = "var(--danger)";
-          }
-        }
-      } catch (error) {
-        if (statusElement) {
-          statusElement.textContent = "Indisponível";
-          statusElement.style.color = "var(--danger)";
-        }
-      }
-
+      const portalStatus = document.getElementById("portal-status");
+      const sentinelStatus = document.getElementById("sentinel-status");
       const gatekeeperCards = document.querySelectorAll("[data-gk-card]");
 
-      const updateGatekeeperCards = (payload) => {
+      if (portalStatus) {
+        portalStatus.textContent = "Online";
+        portalStatus.style.color = "var(--success)";
+      }
+
+      function setClassState(element, stateClass) {
+        if (!element) return;
+        element.classList.remove("danger", "warning");
+        if (stateClass) element.classList.add(stateClass);
+      }
+
+      function formatTimestamp(value) {
+        if (!value) return "---";
+
+        const date = new Date(value);
+
+        if (Number.isNaN(date.getTime())) {
+          return value;
+        }
+
+        return date.toLocaleString("pt-BR", {
+          dateStyle: "short",
+          timeStyle: "medium"
+        });
+      }
+
+      function updateSentinelStatus(status) {
+        if (!sentinelStatus) return;
+
+        if (status === "ACTIVE") {
+          sentinelStatus.textContent = "Online";
+          sentinelStatus.style.color = "var(--success)";
+          return;
+        }
+
+        if (status === "DEGRADED") {
+          sentinelStatus.textContent = "Degradado";
+          sentinelStatus.style.color = "var(--warning)";
+          return;
+        }
+
+        sentinelStatus.textContent = "Indisponível";
+        sentinelStatus.style.color = "var(--danger)";
+      }
+
+      function updateGatekeeperCards(payload) {
+        const status = payload.status || "DEGRADED";
+        const isActive = status === "ACTIVE";
+
+        updateSentinelStatus(status);
+
         gatekeeperCards.forEach((card) => {
           const insightEl = card.querySelector("[data-gk-insight]");
           const totalEl = card.querySelector("[data-gk-total]");
           const regionEl = card.querySelector("[data-gk-region]");
+          const statusEl = card.querySelector("[data-gk-status]");
+          const handshakeEl = card.querySelector("[data-gk-handshake]");
+          const timestampEl = card.querySelector("[data-gk-timestamp]");
+          const ledEl = card.querySelector("[data-gk-led]");
+
+          card.classList.toggle("is-degraded", !isActive);
 
           if (insightEl) {
-            insightEl.innerText = "> " + (payload.governance_insight || "Conformidade validada.");
-            insightEl.style.color = "#00ff00";
+            insightEl.textContent = "> " + (
+              payload.governance_insight ||
+              payload.message ||
+              "Estado de governança recebido sem insight operacional."
+            );
+            insightEl.style.color = isActive ? "#00ff00" : "#f59e0b";
           }
 
           if (totalEl) {
-            totalEl.innerText = payload.total_audited_events || "0";
+            totalEl.textContent = String(payload.total_audited_events ?? "0");
           }
 
           if (regionEl) {
-            regionEl.innerText = payload.region || "GCP_MULTI_REGION";
+            regionEl.textContent = payload.region || "us-central1";
+          }
+
+          if (statusEl) {
+            statusEl.textContent = status;
+            setClassState(statusEl, isActive ? "" : "warning");
+          }
+
+          if (handshakeEl) {
+            handshakeEl.textContent = payload.security_handshake || "SERVICE_ACCOUNT_SCOPED";
+          }
+
+          if (timestampEl) {
+            timestampEl.textContent = formatTimestamp(payload.timestamp);
+          }
+
+          if (ledEl) {
+            ledEl.style.color = isActive ? "#00ff00" : "#f59e0b";
           }
         });
-      };
+      }
 
-      const setGatekeeperError = () => {
+      function setGatekeeperError(error) {
+        updateSentinelStatus("OFFLINE");
+
         gatekeeperCards.forEach((card) => {
           const insightEl = card.querySelector("[data-gk-insight]");
           const regionEl = card.querySelector("[data-gk-region]");
+          const statusEl = card.querySelector("[data-gk-status]");
+          const handshakeEl = card.querySelector("[data-gk-handshake]");
+          const timestampEl = card.querySelector("[data-gk-timestamp]");
+          const ledEl = card.querySelector("[data-gk-led]");
+
+          card.classList.add("is-degraded");
 
           if (insightEl) {
-            insightEl.innerText = "> Erro de sincronização com o Sentinel. Verificando logs de segurança...";
+            insightEl.textContent = "> Erro de sincronização com o Sentinel. Verificando logs de segurança...";
             insightEl.style.color = "#ef4444";
           }
 
           if (regionEl) {
-            regionEl.innerText = "SINCRONIZAÇÃO PENDENTE";
+            regionEl.textContent = "SINCRONIZAÇÃO PENDENTE";
+          }
+
+          if (statusEl) {
+            statusEl.textContent = "OFFLINE";
+            setClassState(statusEl, "danger");
+          }
+
+          if (handshakeEl) {
+            handshakeEl.textContent = "NÃO VALIDADO";
+          }
+
+          if (timestampEl) {
+            timestampEl.textContent = "---";
+          }
+
+          if (ledEl) {
+            ledEl.style.color = "#ef4444";
           }
         });
-      };
+
+        console.error("Erro de conexão com o Gatekeeper:", error);
+      }
+
+      async function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
+
+        try {
+          return await fetch(url, {
+            ...options,
+            signal: controller.signal
+          });
+        } finally {
+          window.clearTimeout(timeout);
+        }
+      }
 
       try {
-        const responseGCP = await fetch(
-          "https://us-central1-mell-gatekeeper-prod.cloudfunctions.net/gatekeeper-cia-tec",
-          { cache: "no-store" }
+        const response = await fetchWithTimeout(
+          GATEKEEPER_ENDPOINT,
+          {
+            method: "GET",
+            cache: "no-store",
+            headers: {
+              "Accept": "application/json"
+            }
+          },
+          8000
         );
 
-        if (!responseGCP.ok) {
-          throw new Error("Falha na resposta da nuvem");
+        let data;
+
+        try {
+          data = await response.json();
+        } catch (jsonError) {
+          throw new Error("Resposta do Sentinel não está em JSON válido.");
         }
 
-        const data = await responseGCP.json();
+        if (!response.ok) {
+          throw new Error(data.message || "Falha HTTP na resposta do Sentinel.");
+        }
+
         updateGatekeeperCards(data);
       } catch (error) {
-        setGatekeeperError();
-        console.error("Erro de conexão com o Showcase:", error);
+        setGatekeeperError(error);
       }
     });
   </script>
