@@ -1,52 +1,39 @@
-# EXECUTE → REGISTER → SEAL → CONFIRM
-
-## EXECUTE
-
-Estrutura de publicação corrigida para repositório com pasta pública.
-
-## REGISTER
-
-Árvore esperada após aplicar o pacote:
+# Estrutura de publicação — MeLL Cognitive Architecture
 
 ```text
 main/
 ├── functions/
 │   └── health.js
 ├── public/
-│   ├── README.md
-│   ├── android-chrome-192x192.png        # preservar se já existir
-│   ├── android-chrome-512x512.png        # preservar se já existir
-│   ├── apple-touch-icon.png              # preservar se já existir
-│   ├── favicon-16x16.png                 # preservar se já existir
-│   ├── favicon-32x32.png                 # preservar se já existir
-│   ├── favicon.ico                       # preservar se já existir
 │   ├── index.html
-│   ├── mell-brand-round.png              # preservar se já existir
 │   ├── robots.txt
-│   ├── site.webmanifest                  # preservar se já existir
 │   ├── sitemap.xml
+│   ├── README.md
 │   ├── docs/
-│   │   └── Politica_Privacidade_LGPD_CIA-Tec_v4.7.1_MeLL.pdf
+│   │   └── README.md
 │   ├── privacypolicy/
 │   │   └── index.html
 │   └── terms/
 │       └── index.html
-└── README.md
+├── netlify.toml
+├── README.md
+└── CHANGELOG_v1.1.md
 ```
 
-## SEAL
+## Publicação
 
-Validações mínimas pós-deploy:
+Netlify deve publicar `public/`.
+
+## Governança pública
+
+Identificadores internos de baseline/versionamento técnico da CIA-Tec™ não devem ser publicados no site institucional.
+
+## Validação
 
 ```text
-/                         → 200
-/robots.txt               → 200
-/sitemap.xml              → 200
-/privacypolicy/           → 200
-/terms/                   → 200
-/docs/Politica_Privacidade_LGPD_CIA-Tec_v4.7.1_MeLL.pdf → 200
+/                 -> 200
+/privacypolicy/   -> 200
+/terms/           -> 200
+/sitemap.xml      -> 200
+/robots.txt       -> 200
 ```
-
-## CONFIRM
-
-A publicação deve apontar para `public/` como diretório público. As pastas `privacypolicy/` e `terms/` precisam ficar dentro de `public/`, não na raiz isolada do repositório.

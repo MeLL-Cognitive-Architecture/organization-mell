@@ -1,28 +1,27 @@
-# CHANGELOG — v1.1 Alinhamento Institucional
+# CHANGELOG v1.1 — Alinhamento institucional público
 
-## EXECUTE
+## Ajustes principais
 
-Gerada versão v1.1 do site institucional com foco em coerência pública com a tipologia CIA-Tec™ v4.7.
+1. Hero institucional
+   - Destaque primário para `MeLL Cognitive Architecture`.
+   - Categoria `IA governada desde a concepção` movida para subtítulo visual.
 
-## REGISTER
-
-Alterações aplicadas:
-
-1. Hero atualizado para destacar **MeLL Cognitive Architecture** como identidade primária.
-2. Subtítulo reposicionado para explicar arquitetura cognitiva, IA governada, rastreabilidade, segurança cognitiva, autonomia supervisionada e soberania humana.
-3. Nova seção `#tipologia` com separação entre organização, arquitetura, framework, Data Layer, plataforma, módulo especializado e interfaces governadas.
-4. Soluções atualizadas:
-   - `CIA-Tec™ v4.7` como arquitetura.
-   - `ERSC-Core — CIA-Tec™` como plataforma operacional.
+2. Tipologia governada
+   - `MeLL Cognitive Architecture` como organização.
+   - `CIA-Tec™` como arquitetura.
+   - `Framework CIA-Tec™` como modelo estruturante.
+   - `DataCore` como Data Layer.
+   - `ERSC-Core` como plataforma operacional.
    - `SovereignGuard / SCGA-Core` como módulo especializado.
-   - assistentes como interfaces governadas.
-5. Contato reforçado com links legais e compromissos públicos de governança.
-6. `netlify.toml` atualizado com redirects e header `Permissions-Policy`.
+   - Interfaces e assistentes como interfaces governadas.
 
-## SEAL
+3. Exposição pública
+   - Removidos identificadores de baseline/versionamento técnico da comunicação pública.
+   - Documentos/versionamentos internos permanecem restritos ao controle documental interno.
 
-Sem alteração de baseline CIA-Tec™. Sem abertura de v5.0. Sem transformação de produto em núcleo.
-
-## CONFIRM
-
-Versão pronta para merge supervisionado no repositório.
+4. Rotas preservadas
+   - `/`
+   - `/privacypolicy/`
+   - `/terms/`
+   - `/sitemap.xml`
+   - `/robots.txt`

@@ -1,4 +1,4 @@
-# Estrutura de Publicação — v1.1
+# Estrutura de publicação — MeLL Cognitive Architecture
 
 ```text
 main/
@@ -10,28 +10,30 @@ main/
 │   ├── sitemap.xml
 │   ├── README.md
 │   ├── docs/
-│   │   └── Politica_Privacidade_LGPD_CIA-Tec_v4.7.1_MeLL.pdf
+│   │   └── README.md
 │   ├── privacypolicy/
 │   │   └── index.html
 │   └── terms/
 │       └── index.html
 ├── netlify.toml
 ├── README.md
-├── CHANGELOG_v1.1.md
-└── ESTRUTURA_PUBLICACAO_v1.1.md
+└── CHANGELOG_v1.1.md
 ```
 
-## Merge
+## Publicação
 
-Aplicar como merge no GitHub. Não excluir arquivos já existentes em `public/`, especialmente:
+Netlify deve publicar `public/`.
+
+## Governança pública
+
+Identificadores internos de baseline/versionamento técnico da CIA-Tec™ não devem ser publicados no site institucional.
+
+## Validação
 
 ```text
-favicon.ico
-favicon-16x16.png
-favicon-32x32.png
-apple-touch-icon.png
-android-chrome-192x192.png
-android-chrome-512x512.png
-mell-brand-round.png
-site.webmanifest
+/                 -> 200
+/privacypolicy/   -> 200
+/terms/           -> 200
+/sitemap.xml      -> 200
+/robots.txt       -> 200
 ```
