@@ -1,187 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>MeLL Cognitive Architecture | IA Governada para Ambientes Críticos</title>
-
-  <meta
-    name="description"
-    content="MeLL Cognitive Architecture projeta arquiteturas de IA governadas para ambientes corporativos, industriais e regulamentados, com foco em rastreabilidade, segurança, conformidade, confiabilidade operacional e soberania humana."
-  />
-
+  <meta name="description" content="Arquitetura cognitiva para IA governada em ambientes críticos: rastreabilidade, segurança, conformidade, autonomia supervisionada e decisão humana soberana." />
   <meta name="author" content="MeLL Cognitive Architecture" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#07111f" />
-
-  <meta property="og:title" content="MeLL Cognitive Architecture" />
-  <meta property="og:description" content="Arquitetura de inteligência cognitiva para IA governada em ambientes críticos." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mellcognitivearchitecture.com.br/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MeLL Cognitive Architecture | IA Governada" />
-  <meta name="twitter:description" content="Projetamos arquiteturas de IA governadas para ambientes corporativos, industriais e regulamentados." />
+  <meta name="color-scheme" content="dark" />
 
   <link rel="canonical" href="https://mellcognitivearchitecture.com.br/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preload" as="image" href="/mell-brand-round.png" imagesrcset="/mell-brand-round.png 512w" imagesizes="(max-width: 720px) 72vw, 420px" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MeLL Cognitive Architecture" />
+  <meta property="og:title" content="MeLL Cognitive Architecture | IA Governada para Ambientes Críticos" />
+  <meta property="og:description" content="Governança cognitiva federada, rastreabilidade, segurança e soberania humana para IA aplicada a ambientes críticos e regulamentados." />
+  <meta property="og:url" content="https://mellcognitivearchitecture.com.br/" />
+  <meta property="og:image" content="https://mellcognitivearchitecture.com.br/mell-brand-round.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="Selo visual da MeLL Cognitive Architecture com cérebro digital e elementos de governança" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MeLL Cognitive Architecture | IA Governada" />
+  <meta name="twitter:description" content="Arquitetura cognitiva para IA governada, auditável e supervisionada por soberania humana." />
+  <meta name="twitter:image" content="https://mellcognitivearchitecture.com.br/mell-brand-round.png" />
+  <meta name="twitter:image:alt" content="Selo visual da MeLL Cognitive Architecture" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MeLL Cognitive Architecture",
-    "url": "https://mellcognitivearchitecture.com.br/",
-    "description": "A MeLL Cognitive Architecture é a camada institucional e arquitetural por trás de iniciativas de IA governadas para ambientes críticos e regulamentados.",
-    "founder": {
-      "@type": "Person",
-      "name": "Luiz Carlos Rezende da Silva"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mellcognitivearchitecture.com.br/#organization",
+        "name": "MeLL Cognitive Architecture",
+        "url": "https://mellcognitivearchitecture.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mellcognitivearchitecture.com.br/mell-brand-round.png",
+          "width": 512,
+          "height": 512
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Luiz Carlos Rezende da Silva"
+        },
+        "sameAs": [
+          "https://github.com/MeLL-Cognitive-Architecture",
+          "https://www.linkedin.com/in/luizcrezende"
+        ],
+        "description": "Arquitetura cognitiva aplicada à governança de IA, inteligência documental, sistemas multinúcleo e autonomia supervisionada em ambientes críticos."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mellcognitivearchitecture.com.br/#website",
+        "url": "https://mellcognitivearchitecture.com.br/",
+        "name": "MeLL Cognitive Architecture",
+        "publisher": {
+          "@id": "https://mellcognitivearchitecture.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://mellcognitivearchitecture.com.br/#webpage",
+        "url": "https://mellcognitivearchitecture.com.br/",
+        "name": "MeLL Cognitive Architecture | IA Governada para Ambientes Críticos",
+        "isPartOf": {
+          "@id": "https://mellcognitivearchitecture.com.br/#website"
+        },
+        "about": {
+          "@id": "https://mellcognitivearchitecture.com.br/#organization"
+        },
+        "description": "Página institucional da MeLL Cognitive Architecture sobre IA governada, rastreabilidade, segurança cognitiva, conformidade e soberania humana.",
+        "inLanguage": "pt-BR"
+      }
+    ]
   }
   </script>
 
   <style>
     :root {
-      --bg: #050b16;
-      --bg-soft: #07111f;
-      --panel: #101827;
-      --panel-2: #0c1423;
-      --border: #223047;
-      --border-soft: rgba(148, 163, 184, 0.18);
-      --text: #f4f7fb;
-      --muted: #a9bdd6;
-      --muted-2: #7f95b3;
+      --bg: #040914;
+      --bg-2: #07111f;
+      --panel: rgba(13, 24, 41, 0.82);
+      --panel-strong: rgba(12, 22, 39, 0.96);
+      --line: rgba(148, 163, 184, 0.2);
+      --line-strong: rgba(125, 211, 252, 0.34);
+      --text: #f8fafc;
+      --muted: #b9c7d9;
+      --muted-2: #8da1bc;
       --accent: #38bdf8;
       --accent-2: #7dd3fc;
-      --accent-3: #2563eb;
-      --success: #22c55e;
-      --danger: #ef4444;
-      --warning: #f59e0b;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-      --radius-xl: 28px;
+      --gold: #d7b75f;
+      --gold-2: #f1d27a;
+      --green: #22c55e;
+      --danger: #f87171;
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+      --radius-xl: 32px;
       --radius-lg: 22px;
-      --max: 1120px;
+      --radius-md: 16px;
+      --max: 1180px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
+      text-size-adjust: 100%;
     }
 
     body {
+      min-width: 320px;
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 18% 0%, rgba(56, 189, 248, 0.18), transparent 30%),
-        radial-gradient(circle at 85% 8%, rgba(37, 99, 235, 0.16), transparent 28%),
-        linear-gradient(180deg, #06111f 0%, var(--bg) 38%, #040914 100%);
       color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       line-height: 1.6;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.18), transparent 28rem),
+        radial-gradient(circle at 82% 12%, rgba(215, 183, 95, 0.13), transparent 24rem),
+        linear-gradient(180deg, #071321 0%, var(--bg) 44%, #02060d 100%);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(125, 211, 252, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(125, 211, 252, 0.045) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 82%);
     }
 
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid rgba(56, 189, 248, 0.8);
-      outline-offset: 3px;
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    p, h1, h2, h3 { overflow-wrap: break-word; }
+
+    ::selection { background: rgba(56, 189, 248, 0.32); color: var(--text); }
+
+    :focus-visible {
+      outline: 3px solid rgba(125, 211, 252, 0.9);
+      outline-offset: 4px;
     }
 
-    ::selection {
-      background: rgba(56, 189, 248, 0.28);
-      color: var(--text);
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      transform: translateY(-180%);
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #02111f;
+      font-weight: 800;
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .container {
+      width: min(100% - 40px, var(--max));
+      margin-inline: auto;
     }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(5, 11, 22, 0.84);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(34, 48, 71, 0.72);
+      z-index: 50;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+      background: rgba(4, 9, 20, 0.78);
+      backdrop-filter: blur(18px);
     }
 
     .nav {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 1.5rem;
+      min-height: 76px;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 0.78rem;
+      min-width: max-content;
       font-weight: 850;
       letter-spacing: -0.035em;
-      font-size: 14px;
-      min-width: max-content;
     }
 
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 11px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-3));
-      display: grid;
-      place-items: center;
-      font-size: 13px;
-      font-weight: 950;
-      color: #00111f;
-      box-shadow: 0 0 32px rgba(56, 189, 248, 0.25);
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(215, 183, 95, 0.36), 0 0 34px rgba(56, 189, 248, 0.22);
     }
+
+    .brand small {
+      display: block;
+      margin-top: -0.15rem;
+      color: var(--muted-2);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .nav-toggle span,
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .nav-toggle span::before,
+    .nav-toggle span::after { content: ""; position: relative; }
+    .nav-toggle span::before { top: -6px; }
+    .nav-toggle span::after { top: 4px; }
+
+    .nav-toggle[aria-expanded="true"] span { transform: rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(90deg); }
+    .nav-toggle[aria-expanded="true"] span::after { opacity: 0; }
 
     .nav-links {
       display: flex;
-      gap: 18px;
       align-items: center;
-      font-size: 13px;
+      gap: 0.35rem;
       color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 730;
     }
 
     .nav-links a {
-      transition: color 160ms ease, transform 160ms ease;
+      padding: 0.65rem 0.78rem;
+      border-radius: 999px;
+      transition: color 160ms ease, background 160ms ease, transform 160ms ease;
     }
 
     .nav-links a:hover {
       color: var(--text);
+      background: rgba(255, 255, 255, 0.055);
       transform: translateY(-1px);
     }
 
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 24px;
+    .section {
+      padding: clamp(4.5rem, 7vw, 7rem) 0;
+      scroll-margin-top: 96px;
     }
 
     .hero {
-      padding: 96px 0 68px;
       position: relative;
-      overflow: hidden;
+      overflow: clip;
+      padding: clamp(5rem, 8vw, 8.2rem) 0 clamp(4rem, 7vw, 6.4rem);
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      inset: 16% -12% auto auto;
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 62%);
+      inset: 15% -12rem auto auto;
+      width: 34rem;
+      height: 34rem;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.16), transparent 64%);
       pointer-events: none;
     }
 
@@ -189,445 +301,333 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      gap: 42px;
+      grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
+      gap: clamp(2rem, 6vw, 5rem);
       align-items: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
+      gap: 0.55rem;
+      margin-bottom: 1.25rem;
+      padding: 0.42rem 0.78rem;
+      border: 1px solid rgba(125, 211, 252, 0.25);
       border-radius: 999px;
-      background: rgba(56, 189, 248, 0.11);
+      background: rgba(56, 189, 248, 0.1);
       color: var(--accent-2);
-      font-size: 13px;
-      font-weight: 760;
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      margin-bottom: 20px;
+      font-size: 0.86rem;
+      font-weight: 840;
     }
 
     .pulse {
-      width: 8px;
-      height: 8px;
+      width: 0.55rem;
+      height: 0.55rem;
       border-radius: 999px;
-      background: var(--success);
-      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.14);
+      background: var(--green);
+      box-shadow: 0 0 0 0.42rem rgba(34, 197, 94, 0.12);
     }
 
     h1 {
+      max-width: 900px;
       margin: 0;
-      max-width: 820px;
-      font-size: clamp(42px, 6.2vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.07em;
+      font-size: clamp(3rem, 7.2vw, 6.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.083em;
     }
 
-    .hero p {
-      margin: 24px 0 0;
-      max-width: 790px;
+    .lead {
+      max-width: 760px;
+      margin: 1.45rem 0 0;
       color: var(--muted);
-      font-size: clamp(17px, 1.7vw, 21px);
+      font-size: clamp(1.05rem, 1.4vw, 1.28rem);
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
+      gap: 0.9rem;
+      margin-top: 2rem;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      min-height: 46px;
-      padding: 0 18px;
-      border-radius: 14px;
-      font-weight: 780;
-      font-size: 14px;
+      gap: 0.55rem;
+      min-height: 48px;
+      padding: 0 1.1rem;
       border: 1px solid transparent;
-      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      border-radius: 15px;
+      font-weight: 850;
+      line-height: 1;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--accent); color: #02111f; }
+    .button.secondary { border-color: var(--line); background: rgba(255, 255, 255, 0.045); color: var(--text); }
+    .button.ghost { color: var(--accent-2); }
 
-    .button.primary {
-      background: var(--accent);
-      color: #03101d;
-    }
-
-    .button.secondary {
-      border-color: var(--border);
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .status-card {
-      background: linear-gradient(180deg, rgba(16, 24, 39, 0.96), rgba(12, 20, 35, 0.96));
-      border: 1px solid var(--border);
+    .hero-panel {
+      position: relative;
+      padding: 1.1rem;
+      border: 1px solid rgba(215, 183, 95, 0.27);
       border-radius: var(--radius-xl);
-      padding: 24px;
+      background:
+        linear-gradient(180deg, rgba(12, 23, 40, 0.88), rgba(5, 12, 23, 0.94)),
+        radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.18), transparent 70%);
       box-shadow: var(--shadow);
     }
 
-    .status-card h2 {
-      margin: 0 0 18px;
-      font-size: 22px;
-      letter-spacing: -0.03em;
+    .hero-logo {
+      width: min(100%, 430px);
+      margin-inline: auto;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 32px rgba(56, 189, 248, 0.26));
     }
 
-    .status-list {
+    .metric-grid {
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
     }
 
-    .status-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-bottom: 1px solid rgba(34, 48, 71, 0.7);
-      padding-bottom: 12px;
-      color: var(--muted);
-      font-size: 14px;
+    .metric {
+      min-height: 92px;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
     }
 
-    .status-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
+    .metric strong {
+      display: block;
+      color: var(--gold-2);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .status-item strong {
+    .metric span {
+      display: block;
+      margin-top: 0.22rem;
       color: var(--text);
-      text-align: right;
+      font-size: 1.02rem;
+      font-weight: 820;
+      letter-spacing: -0.02em;
     }
 
-    section {
-      padding: 60px 0;
-      scroll-margin-top: 90px;
-    }
-
-    .section-title {
+    .section-head {
       display: grid;
-      gap: 10px;
-      margin-bottom: 28px;
+      gap: 0.75rem;
+      max-width: 900px;
+      margin-bottom: 2rem;
     }
 
-    .section-title h2 {
+    .section-head.center { margin-inline: auto; text-align: center; }
+
+    .kicker {
+      color: var(--gold-2);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h2 {
       margin: 0;
-      font-size: clamp(28px, 4vw, 42px);
-      letter-spacing: -0.045em;
-      line-height: 1.1;
+      font-size: clamp(2rem, 4.4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.064em;
     }
 
-    .section-title p {
+    .section-head p {
       margin: 0;
       color: var(--muted);
-      max-width: 850px;
-      font-size: 17px;
+      font-size: 1.08rem;
     }
 
     .grid {
       display: grid;
-      gap: 18px;
+      gap: 1rem;
     }
 
-    .grid.three {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .grid.two {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .card {
-      background: linear-gradient(180deg, rgba(16, 24, 39, 0.82), rgba(12, 20, 35, 0.7));
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-lg);
-      padding: 22px;
+      position: relative;
       min-height: 100%;
+      padding: 1.35rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(15, 27, 46, 0.84), rgba(9, 18, 33, 0.78));
       transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: rgba(56, 189, 248, 0.34);
-      background: linear-gradient(180deg, rgba(16, 24, 39, 0.96), rgba(12, 20, 35, 0.82));
+      border-color: var(--line-strong);
+      background: linear-gradient(180deg, rgba(16, 31, 53, 0.96), rgba(9, 18, 33, 0.86));
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
+      margin: 0 0 0.6rem;
+      font-size: 1.18rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
     }
 
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
+    .card p { margin: 0; color: var(--muted); }
 
     .tag {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 14px;
-      padding: 5px 10px;
+      margin-bottom: 0.9rem;
+      padding: 0.28rem 0.64rem;
+      border: 1px solid rgba(125, 211, 252, 0.25);
       border-radius: 999px;
+      background: rgba(56, 189, 248, 0.08);
       color: var(--accent-2);
-      background: rgba(56, 189, 248, 0.1);
-      font-size: 12px;
-      font-weight: 780;
-    }
-
-    .showcase {
-      padding-top: 36px;
-      padding-bottom: 64px;
-      text-align: center;
-    }
-
-    .showcase .section-title {
-      justify-items: center;
-    }
-
-    .showcase .section-title p {
-      max-width: 760px;
-    }
-
-    .showcase-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px 0 30px;
-      padding: 8px 16px;
-      border-radius: 20px;
-      border: 1px solid #333;
-      background: #111;
-      color: #00ff00;
-      font-size: 0.9rem;
-      font-weight: 800;
-    }
-
-    .showcase-link:hover {
-      color: #7cff7c;
-      border-color: #00ff00;
-    }
-
-    .showcase-card-wrap {
-      display: flex;
-      justify-content: center;
-    }
-
-    .gatekeeper-card {
-      width: 100%;
-      max-width: 560px;
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #00ff00;
-      background: #000;
-      color: #00ff00;
-      font-family: "Courier New", monospace;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
-      text-align: left;
-      line-height: 1.5;
-    }
-
-    .gatekeeper-card.is-degraded {
-      border-color: var(--danger);
-      box-shadow: 0 0 20px rgba(239, 68, 68, 0.16);
-    }
-
-    .gatekeeper-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding-bottom: 12px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid #333;
-      font-size: 0.9rem;
-      font-weight: 800;
-    }
-
-    .gatekeeper-blink {
-      animation: gk-blink 1s infinite;
-    }
-
-    .gatekeeper-insight {
-      min-height: 3em;
-      margin: 10px 0;
-    }
-
-    .gatekeeper-meta {
-      padding-top: 12px;
-      margin-top: 10px;
-      border-top: 1px solid #333;
-      color: #888;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
+      font-weight: 880;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
-    .gatekeeper-value {
-      color: #00ff00;
-    }
-
-    .gatekeeper-value.danger {
-      color: var(--danger);
-    }
-
-    .gatekeeper-value.warning {
-      color: var(--warning);
-    }
-
-    @keyframes gk-blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
+    .accent-card {
+      border-color: rgba(215, 183, 95, 0.34);
+      background:
+        linear-gradient(180deg, rgba(21, 31, 49, 0.92), rgba(11, 19, 32, 0.86)),
+        radial-gradient(circle at 0% 0%, rgba(215, 183, 95, 0.18), transparent 44%);
     }
 
     .flow {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      counter-reset: flow;
     }
 
     .flow-step {
-      padding: 22px;
-      border-radius: 20px;
-      background: rgba(56, 189, 248, 0.07);
-      border: 1px solid rgba(56, 189, 248, 0.18);
+      counter-increment: flow;
+      padding: 1.25rem;
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      border-radius: 22px;
+      background: rgba(56, 189, 248, 0.075);
     }
 
-    .flow-step span {
-      display: block;
-      color: var(--accent);
+    .flow-step::before {
+      content: "0" counter(flow);
+      display: inline-grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent-2);
+      font-size: 0.82rem;
       font-weight: 920;
-      font-size: 13px;
-      margin-bottom: 8px;
     }
 
     .flow-step strong {
       display: block;
-      font-size: 19px;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
+      margin-bottom: 0.45rem;
+      font-size: 1.08rem;
+      letter-spacing: -0.03em;
     }
 
     .flow-step p {
       margin: 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 0.96rem;
     }
 
-    .link-card a,
-    .footer a {
-      color: var(--accent-2);
-      word-break: normal;
+    .band {
+      border-block: 1px solid rgba(148, 163, 184, 0.12);
+      background:
+        linear-gradient(90deg, rgba(56, 189, 248, 0.06), rgba(215, 183, 95, 0.06)),
+        rgba(255, 255, 255, 0.018);
     }
 
-    .link-card a:hover,
-    .footer a:hover {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .contact-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      align-items: stretch;
-    }
-
-    .contact-card {
+    .solution-card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: flex-start;
-      min-height: 100%;
-      overflow: hidden;
+      gap: 1.35rem;
     }
 
-    .click-card {
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 100%;
-    }
-
-    .icon-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 14px;
-      color: var(--accent-2);
-      font-weight: 760;
-    }
-
-    .icon-link {
+    .card-link {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      padding: 0;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: 14px;
-      background: rgba(56, 189, 248, 0.08);
+      gap: 0.55rem;
+      width: max-content;
       color: var(--accent-2);
-      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      font-weight: 850;
     }
 
-    .icon-link:hover {
-      transform: translateY(-2px);
-      border-color: rgba(56, 189, 248, 0.44);
-      background: rgba(56, 189, 248, 0.13);
-      text-decoration: none;
+    .card-link::after { content: "↗"; font-size: 0.95rem; }
+    .card-link:hover { color: var(--text); }
+
+    .cta-panel {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 1.5rem;
+      align-items: center;
+      padding: clamp(1.5rem, 4vw, 2.4rem);
+      border: 1px solid rgba(215, 183, 95, 0.32);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 16% 0%, rgba(56, 189, 248, 0.15), transparent 36rem),
+        linear-gradient(135deg, rgba(16, 29, 51, 0.94), rgba(6, 13, 24, 0.92));
+      box-shadow: var(--shadow);
     }
 
-    .icon {
-      width: 18px;
-      height: 18px;
-      flex: 0 0 18px;
-    }
+    .cta-panel h2 { font-size: clamp(2rem, 4.2vw, 3.4rem); }
+    .cta-panel p { max-width: 700px; color: var(--muted); }
 
     .footer {
-      padding: 34px 0 44px;
-      border-top: 1px solid var(--border);
+      padding: 2.4rem 0 3rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.92rem;
     }
 
     .footer-row {
       display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
+
+    .footer a { color: var(--accent-2); font-weight: 760; }
+    .footer a:hover { color: var(--text); }
 
     .to-top {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 30;
-      width: 48px;
-      height: 48px;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 40;
       display: inline-grid;
       place-items: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 16px;
-      background: rgba(56, 189, 248, 0.92);
-      color: #03101d;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+      background: rgba(56, 189, 248, 0.94);
+      color: #02111f;
+      font-size: 1.35rem;
+      font-weight: 920;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.38);
       transition: transform 160ms ease, background 160ms ease;
     }
 
-    .to-top:hover {
-      transform: translateY(-3px);
-      background: var(--accent-2);
-    }
+    .to-top:hover { transform: translateY(-3px); background: var(--accent-2); }
 
     .sr-only {
       position: absolute;
@@ -641,61 +641,62 @@
       border: 0;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .hero-grid,
-      .grid.three,
       .grid.two,
-      .flow {
-        grid-template-columns: 1fr;
-      }
+      .grid.three,
+      .grid.four,
+      .flow,
+      .cta-panel { grid-template-columns: 1fr; }
 
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+      .hero-panel { max-width: 560px; margin-inline: auto; }
+
+      .nav-toggle { display: grid; }
 
       .nav-links {
-        flex-wrap: wrap;
-        gap: 12px 16px;
+        position: absolute;
+        top: 76px;
+        left: 20px;
+        right: 20px;
+        display: grid;
+        gap: 0.15rem;
+        padding: 0.75rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(5, 11, 22, 0.96);
+        box-shadow: var(--shadow);
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 160ms ease, transform 160ms ease;
       }
 
-      .hero {
-        padding-top: 62px;
+      .nav-links[data-open="true"] {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
+
+      .nav-links a { padding: 0.82rem 0.9rem; }
     }
 
-    @media (max-width: 560px) {
-      .container,
-      .nav {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .to-top {
-        right: 16px;
-        bottom: 16px;
-      }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 32px, var(--max)); }
+      .hero { padding-top: 4rem; }
+      .brand span:last-child { max-width: 188px; }
+      .brand small { display: none; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .actions { display: grid; }
+      .button { width: 100%; }
+      .section { padding: 4rem 0; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
       }
     }
@@ -703,387 +704,203 @@
 </head>
 
 <body id="topo">
-  <header class="site-header">
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="#topo" aria-label="MeLL Cognitive Architecture - voltar ao início">
-        <span class="brand-mark">M</span>
-        <span>MeLL Cognitive Architecture</span>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a class="brand" href="#topo" aria-label="MeLL Cognitive Architecture — voltar ao início">
+        <img src="/mell-brand-round.png" width="42" height="42" alt="" decoding="async" />
+        <span>
+          MeLL Cognitive Architecture
+          <small>Governança cognitiva</small>
+        </span>
       </a>
 
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+
+      <nav id="menu-principal" class="nav-links" aria-label="Navegação principal" data-open="false">
         <a href="#sobre">Sobre</a>
         <a href="#principios">Princípios</a>
         <a href="#processo">Processo</a>
         <a href="#pilares">Pilares</a>
         <a href="#solucoes">Soluções</a>
         <a href="#contato">Contato</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">
-            <span class="pulse" aria-hidden="true"></span>
-            Ambiente institucional online
-          </div>
-
-          <h1 id="hero-title">MeLL Cognitive Architecture</h1>
-
-          <p>
-            Startup de base tecnológica especializada em arquitetura cognitiva aplicada, governança de inteligência documental
-            e sistemas multinúcleo em camadas, orientados a controles, métricas, rastreabilidade, autonomia supervisionada,
-            segurança cognitiva e soberania humana por design.
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> IA governada desde a concepção</p>
+          <h1 id="hero-title">IA governada para ambientes críticos e regulamentados.</h1>
+          <p class="lead">
+            A MeLL Cognitive Architecture estrutura governança cognitiva federada para organizações que precisam aplicar IA com rastreabilidade, segurança, conformidade, autonomia supervisionada e decisão humana soberana.
           </p>
 
+          <div class="actions" aria-label="Ações principais">
+            <a class="button primary" href="#processo">Conhecer o fluxo governado</a>
+            <a class="button secondary" href="#solucoes">Ver soluções</a>
+            <a class="button ghost" href="#contato">Canais oficiais</a>
+          </div>
         </div>
+
+        <aside class="hero-panel" aria-label="Resumo operacional da arquitetura">
+          <img class="hero-logo" src="/mell-brand-round.png" width="512" height="512" alt="Selo da MeLL Cognitive Architecture com cérebro digital, camadas técnicas e elementos de governança" fetchpriority="high" decoding="async" />
+          <div class="metric-grid" aria-label="Indicadores de governança">
+            <div class="metric"><strong>Decisão crítica</strong><span>Humana e explícita</span></div>
+            <div class="metric"><strong>Saída da IA</strong><span>Consultiva e rastreável</span></div>
+            <div class="metric"><strong>Evidências</strong><span>Registradas por escopo</span></div>
+            <div class="metric"><strong>Evolução</strong><span>Controlada por cut-off</span></div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="sobre">
+    <section id="sobre" class="section" aria-labelledby="sobre-title">
       <div class="container">
-        <div class="section-title">
-          <h2>Sobre a MeLL Cognitive Architecture</h2>
+        <div class="section-head">
+          <p class="kicker">Sobre</p>
+          <h2 id="sobre-title">Arquitetura cognitiva aplicada à governança de IA.</h2>
           <p>
-            A MeLL Cognitive Architecture estrutura frameworks, arquiteturas e sistemas de governança cognitiva federada,
-            orientados à gestão documental, rastreabilidade, controle de risco, métricas de aderência, segurança cognitiva,
-            autonomia supervisionada da IA e preservação da autoridade humana em decisões críticas.
+            Frameworks, plataformas e sistemas de inteligência documental orientados a risco, auditoria, métricas de aderência, segregação de responsabilidades e preservação da autoridade humana em decisões críticas.
           </p>
         </div>
 
         <div class="grid two">
-          <article class="card">
+          <article class="card accent-card">
             <span class="tag">Visão</span>
-            <h3>IA governada desde a concepção</h3>
-            <p>
-              A inteligência artificial não deve ser improvisada em ambientes críticos. A MeLL estrutura arquiteturas,
-              plataformas e recursos técnicos concebidos para operar com governança, segurança, rastreabilidade e
-              supervisão humana desde o início.
-            </p>
+            <h3>Governança por design</h3>
+            <p>A IA é concebida com regras, escopo, limites operacionais, registros e mecanismos de confirmação desde a origem, não como ajuste posterior.</p>
           </article>
-
           <article class="card">
             <span class="tag">Aplicação</span>
-            <h3>Ambientes críticos e regulamentados</h3>
-            <p>
-              Nosso trabalho é orientado a organizações que operam em contextos de alto impacto, onde falhas podem gerar
-              perda financeira, indisponibilidade operacional, risco à segurança, exposição de dados ou não conformidade.
-            </p>
+            <h3>Ambientes de alto impacto</h3>
+            <p>Estrutura voltada a contextos nos quais falhas podem gerar indisponibilidade, perda financeira, exposição de dados, risco à segurança ou não conformidade.</p>
           </article>
-
           <article class="card">
             <span class="tag">Governança</span>
-            <h3>Decisão humana soberana</h3>
-            <p>
-              A IA atua como camada de apoio cognitivo: analisa, organiza, recomenda e identifica riscos. Decisões críticas,
-              autorizações, exceções e mudanças estruturais permanecem sob responsabilidade humana explícita.
-            </p>
+            <h3>Soberania humana</h3>
+            <p>A IA analisa, organiza, recomenda e identifica riscos. Aprovações, exceções, mudanças estruturais e efeitos institucionais permanecem sob autoridade humana explícita.</p>
           </article>
-
           <article class="card">
             <span class="tag">Rastreabilidade</span>
-            <h3>Inteligência operacional auditável</h3>
-            <p>
-              A governança não pode ser caixa preta. A MeLL adota princípios de registro, evidência, validação e confirmação
-              para apoiar decisões mais seguras, transparentes e tecnicamente justificáveis.
-            </p>
+            <h3>Inteligência auditável</h3>
+            <p>Comandos, premissas, fontes, lacunas, riscos, versões e conclusões são tratados como evidências verificáveis do processo cognitivo assistido.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="principios">
+    <section id="principios" class="section band" aria-labelledby="principios-title">
       <div class="container">
-        <div class="section-title">
-          <h2>Governança Cognitiva Federada</h2>
+        <div class="section-head center">
+          <p class="kicker">Princípios</p>
+          <h2 id="principios-title">Governança cognitiva federada.</h2>
           <p>
-            Governar processos cognitivos assistidos por IA, com controles proporcionais ao risco, métricas de aderência,
-            rastreabilidade integral, autonomia supervisionada, segurança cognitiva e soberania humana.
+            Controles proporcionais ao risco para ampliar capacidade analítica sem converter cognição automatizada em autoridade decisória, efeito institucional ou mudança estrutural sem confirmação humana.
           </p>
         </div>
 
         <div class="grid three">
-          <article class="card">
-            <h3>Soberania humana</h3>
-            <p>Decisões críticas, aprovações e mudanças estruturais permanecem sob autoridade humana explícita.</p>
-          </article>
-
-          <article class="card">
-            <h3>Autonomia supervisionada</h3>
-            <p>A IA pode analisar, estruturar, recomendar e apoiar, mas não substitui responsabilidade humana.</p>
-          </article>
-
-          <article class="card">
-            <h3>Governança documental</h3>
-            <p>Documentos, evidências, versões e decisões devem possuir escopo, origem, validade e rastreabilidade.</p>
-          </article>
-
-          <article class="card">
-            <h3>Rastreabilidade total</h3>
-            <p>Processos assistidos por IA devem manter registros verificáveis de premissas, evidências e conclusões.</p>
-          </article>
-
-          <article class="card">
-            <h3>Integridade documental</h3>
-            <p>Conteúdos devem ser classificados, versionados e tratados conforme seu efeito formal e grau de validade.</p>
-          </article>
-
-          <article class="card">
-            <h3>Segurança cognitiva</h3>
-            <p>Ambiguidade, excesso de autonomia e uso indevido de contexto devem ser tratados como riscos operacionais.</p>
-          </article>
-
-          <article class="card">
-            <h3>Separação de responsabilidades</h3>
-            <p>Arquitetura, execução, validação, aprovação e auditoria devem manter papéis distintos e rastreáveis.</p>
-          </article>
-
-          <article class="card">
-            <h3>Isolamento multinúcleo</h3>
-            <p>Ambientes, núcleos, módulos e produtos devem operar com escopo definido e sem contaminação estrutural.</p>
-          </article>
-
-          <article class="card">
-            <h3>Observabilidade e auditoria</h3>
-            <p>A arquitetura deve permitir análise contínua de eventos, recomendações, riscos, decisões e evidências.</p>
-          </article>
+          <article class="card"><h3>Soberania humana</h3><p>Decisões críticas e mudanças estruturais exigem autoridade humana explícita.</p></article>
+          <article class="card"><h3>Autonomia supervisionada</h3><p>A IA apoia análise e recomendação, sem substituir responsabilidade formal.</p></article>
+          <article class="card"><h3>Governança documental</h3><p>Documentos, versões, evidências e decisões possuem escopo, origem e validade.</p></article>
+          <article class="card"><h3>Rastreabilidade total</h3><p>Premissas, fontes, lacunas, riscos e conclusões permanecem verificáveis.</p></article>
+          <article class="card"><h3>Segurança cognitiva</h3><p>Ambiguidade, excesso de autonomia e uso indevido de contexto são riscos operacionais.</p></article>
+          <article class="card"><h3>Isolamento multinúcleo</h3><p>Núcleos, módulos e ambientes operam com escopo definido e sem contaminação estrutural.</p></article>
+          <article class="card"><h3>Separação de responsabilidades</h3><p>Arquitetura, execução, validação, aprovação e auditoria mantêm papéis distintos.</p></article>
+          <article class="card"><h3>Observabilidade</h3><p>Eventos, recomendações, riscos, decisões e evidências são passíveis de análise contínua.</p></article>
+          <article class="card"><h3>Evolução controlada</h3><p>Mudanças estruturais exigem cut-off, escopo, impacto e aprovação aplicável.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="processo">
+    <section id="processo" class="section" aria-labelledby="processo-title">
       <div class="container">
-        <div class="section-title">
-          <h2>Regra de decisão: soberania governada</h2>
-          <p>
-            Fluxo operacional: sem confirmação humana explícita, a saída permanece consultiva e não produz efeito institucional governado.
-          </p>
+        <div class="section-head">
+          <p class="kicker">Processo</p>
+          <h2 id="processo-title">Regra operacional de soberania governada.</h2>
+          <p>Sem confirmação humana explícita, a saída permanece consultiva e não produz efeito institucional governado.</p>
         </div>
 
-        <div class="flow" aria-label="Fluxo de governança cognitiva">
-          <div class="flow-step">
-            <span>➔</span>
-            <strong>⚙️ EXECUTE</strong>
-            <p>IA executa análise, organização, classificação, comparação e proposta.</p>
-          </div>
-
-          <div class="flow-step">
-            <span>➔</span>
-            <strong>🏛️ REGISTER</strong>
-            <p>Registra comando, escopo, premissas, fontes, riscos, lacunas e evidências.</p>
-          </div>
-
-          <div class="flow-step">
-            <span>➔</span>
-            <strong>🪪 SEAL</strong>
-            <p>Artefato ou estado é estabilizado, escopo definido e autorização aplicável.</p>
-          </div>
-
-          <div class="flow-step">
-            <span>➔</span>
-            <strong>✅ CONFIRM</strong>
-            <p>Humano aprova, rejeita, ajusta, bloqueia, escalona ou autoriza exceção.</p>
-          </div>
+        <div class="flow" aria-label="Fluxo EXECUTE REGISTER SEAL CONFIRM">
+          <article class="flow-step"><strong>EXECUTE</strong><p>A IA executa análise, organização, classificação, comparação e proposta técnica.</p></article>
+          <article class="flow-step"><strong>REGISTER</strong><p>O sistema registra comando, escopo, premissas, fontes, riscos, lacunas e evidências.</p></article>
+          <article class="flow-step"><strong>SEAL</strong><p>O artefato é estabilizado quando há consistência, escopo definido e autorização aplicável.</p></article>
+          <article class="flow-step"><strong>CONFIRM</strong><p>O humano aprova, rejeita, ajusta, bloqueia, escalona ou autoriza exceção.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="pilares">
+    <section id="pilares" class="section band" aria-labelledby="pilares-title">
       <div class="container">
-        <div class="section-title">
-          <h2>Pilares operacionais</h2>
-          <p>
-            Estrutura voltada à prevenção, redução, controle e rastreabilidade de riscos organizacionais, técnicos,
-            ambientais, ocupacionais, regulatórios e institucionais.
-          </p>
+        <div class="section-head">
+          <p class="kicker">Pilares operacionais</p>
+          <h2 id="pilares-title">Controle, continuidade e conformidade.</h2>
+          <p>Estrutura voltada à prevenção, redução, controle e rastreabilidade de riscos organizacionais, técnicos, ambientais, ocupacionais, regulatórios e institucionais.</p>
         </div>
 
         <div class="grid three">
-          <article class="card">
-            <h3>Confiabilidade</h3>
-            <p>Estruturas orientadas à continuidade, redução de falhas, revisão e controle de dependências críticas.</p>
-          </article>
-
-          <article class="card">
-            <h3>Excelência operacional</h3>
-            <p>Processos claros, registros consistentes, melhoria contínua e operação tecnicamente controlada.</p>
-          </article>
-
-          <article class="card">
-            <h3>Otimização de custos</h3>
-            <p>Uso proporcional de recursos, modelos, infraestrutura e automações conforme criticidade e valor.</p>
-          </article>
-
-          <article class="card">
-            <h3>Eficiência de desempenho</h3>
-            <p>Arquiteturas projetadas para operar com coerência técnica, escalabilidade e uso eficiente de recursos.</p>
-          </article>
-
-          <article class="card">
-            <h3>Segurança e privacidade</h3>
-            <p>Proteção de dados, controle de acesso, contenção de riscos e separação entre ambientes e responsabilidades.</p>
-          </article>
-
-          <article class="card">
-            <h3>Conformidade</h3>
-            <p>Aderência a políticas, normas, diretrizes, requisitos regulatórios e práticas de governança responsável.</p>
-          </article>
+          <article class="card"><h3>Confiabilidade</h3><p>Continuidade, redução de falhas, revisão e controle de dependências críticas.</p></article>
+          <article class="card"><h3>Excelência operacional</h3><p>Processos claros, registros consistentes, melhoria contínua e operação tecnicamente controlada.</p></article>
+          <article class="card"><h3>Otimização de custos</h3><p>Uso proporcional de modelos, infraestrutura, automações e recursos conforme criticidade e valor.</p></article>
+          <article class="card"><h3>Eficiência de desempenho</h3><p>Arquiteturas coerentes, escaláveis e orientadas ao uso eficiente de recursos.</p></article>
+          <article class="card"><h3>Segurança e privacidade</h3><p>Proteção de dados, controle de acesso, contenção de riscos e segregação de ambientes.</p></article>
+          <article class="card"><h3>Conformidade</h3><p>Aderência a políticas, normas, requisitos regulatórios e práticas de governança responsável.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="solucoes">
+    <section id="solucoes" class="section" aria-labelledby="solucoes-title">
       <div class="container">
-        <div class="section-title">
-          <h2>Governança Cognitiva Corporativa</h2>
-          <p>
-            Iniciativas e soluções estratégicas de governança para Indústria 4.0, setor financeiro, ambientes críticos
-            e decisórios, módulos conceituais e agentes especialistas governados.
-          </p>
+        <div class="section-head center">
+          <p class="kicker">Soluções</p>
+          <h2 id="solucoes-title">Governança cognitiva corporativa.</h2>
+          <p>Iniciativas estratégicas para Indústria 4.0, setor financeiro, ambientes críticos, inteligência documental e agentes especialistas governados.</p>
         </div>
 
         <div class="grid three">
-          <article class="card">
-            <span class="tag">Arquitetura</span>
-            <h3>CIA-Tec</h3>
-            <p>
-              Cognitive Intelligence Architecture — Technology, arquitetura federada de governança cognitiva orientada à
-              autonomia supervisionada, rastreabilidade, segurança cognitiva e soberania humana.
-            </p>
+          <article class="card solution-card">
+            <div><span class="tag">Arquitetura</span><h3>CIA-Tec</h3><p>Cognitive Intelligence Architecture — Technology: arquitetura federada orientada a autonomia supervisionada, DataCore, núcleos funcionais, rastreabilidade e soberania humana.</p></div>
           </article>
-
-          <article class="card">
-            <span class="tag">Industrial AI</span>
-            <h3>ERSC-Core — CIA-Tec</h3>
-            <p>
-              Solução conceitual de IA industrial para governança federada de incidentes, fluxos operacionais, evidências,
-              recomendações, classificação de riscos e execução supervisionada.
-            </p>
+          <article class="card solution-card">
+            <div><span class="tag">Industrial AI</span><h3>ERSC-Core — CIA-Tec</h3><p>IA industrial para governança federada de incidentes, fluxos operacionais, integrações, evidências, recomendações, classificação de riscos e execução supervisionada.</p></div>
           </article>
-
-          <article class="card">
-            <span class="tag">Governança ativa</span>
-            <h3>SCGA-Core — CIA-Tec</h3>
-            <p>
-              Arquitetura para garantir que a autonomia da inteligência artificial em ambientes críticos seja mediada por
-              soberania humana, ética, registro, contenção e rastreabilidade.
-            </p>
+          <article class="card solution-card">
+            <div><span class="tag">Governança ativa</span><h3>SCGA-Core — CIA-Tec</h3><p>Camada estratégica para mediar autonomia da IA por soberania humana, ética, registro, interceptação cognitiva, contenção e rastreabilidade.</p></div>
           </article>
-
-          <article class="card">
-            <span class="tag">Manutenção Industrial</span>
-            <h3>Chat I.A 🔧 Manutenção Elétrica Industrial</h3>
-            <p>
-              Assistente técnico especializado em manutenção elétrica industrial, diagnóstico teórico, confiabilidade,
-              PCM, automação e energia.
-            </p>
+          <article class="card solution-card">
+            <div><span class="tag">Manutenção industrial</span><h3>Chat I.A Manutenção Elétrica Industrial</h3><p>Assistente técnico para diagnóstico teórico, análise de falhas, confiabilidade, PCM, automação, energia e suporte prático ao chão de fábrica.</p></div>
           </article>
-
-          <a
-            class="card click-card"
-            href="https://chatgpt.com/g/g-688bdb690e608191836560c539fbde4e-calculu-energia-simplestm"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir CalcuLú Energia Simples no ChatGPT"
-          >
-            <div>
-              <span class="tag">Energia</span>
-              <h3>CalcuLú 💡 Energia Simples</h3>
-              <p>
-                Assistente brasileiro que simplifica a conta de luz, mostra desperdícios e estima economia com linguagem clara.
-              </p>
-            </div>
-            <p class="icon-row">
-              <span class="icon-link" aria-hidden="true">↗</span>
-            </p>
-          </a>
-
-          <article class="card">
-            <span class="tag">Instrumentação Industrial</span>
-            <h3>Especialista técnico colaborativo</h3>
-            <p>
-              Suporte técnico governado em instrumentação industrial, documentação, configuração, instalação, exemplos e testes práticos.
-            </p>
+          <article class="card solution-card">
+            <div><span class="tag">Energia</span><h3>CalcuLú Energia Simples</h3><p>Assistente brasileiro para simplificar a conta de luz, identificar desperdícios e estimar economia com explicações claras e práticas.</p></div>
+            <a class="card-link" href="https://chatgpt.com/g/g-688bdb690e608191836560c539fbde4e-calculu-energia-simplestm" target="_blank" rel="noopener noreferrer">Abrir assistente</a>
+          </article>
+          <article class="card solution-card">
+            <div><span class="tag">Instrumentação</span><h3>Assistente técnico-didático</h3><p>Suporte estruturado para aprendizagem continuada em instrumentação industrial e controle de processos, do básico ao avançado.</p></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contato">
-      <div class="container">
-        <div class="section-title">
-          <h2>Presença Digital</h2>
+    <section id="contato" class="section" aria-labelledby="contato-title">
+      <div class="container cta-panel">
+        <div>
+          <p class="kicker">Presença digital</p>
+          <h2 id="contato-title">Canais oficiais e documentação técnica.</h2>
           <p>
-            Relacionamento, documentação técnica, demonstrações, redes e canais oficiais da MeLL Cognitive Architecture.
+            Acompanhe a evolução institucional, documentação pública, demonstrações não sensíveis, templates e materiais relacionados à governança cognitiva da MeLL Cognitive Architecture.
           </p>
         </div>
-
-        <div class="grid three contact-grid">
-          <a
-            class="card link-card contact-card click-card"
-            href="https://mellcognitivearchitecture.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir site institucional MeLL Cognitive Architecture"
-          >
-            <div>
-              <span class="tag">Governança e Segurança</span>
-              <h3>Site Institucional</h3>
-              <p>
-                Estrutura documental, IA responsável, compliance, auditoria, trilha imutável, gestão de riscos,
-                segurança da informação, privacidade, LGPD e conformidade regulatória.
-              </p>
-            </div>
-            <p class="icon-row">
-              <span class="icon-link" aria-hidden="true">↗</span>
-            </p>
-          </a>
-
-          <article class="card link-card contact-card">
-            <div>
-              <span class="tag">GitHub</span>
-              <h3>Documentação Técnica</h3>
-              <p>
-                Organização técnica para documentação pública, exemplos, demonstrações não sensíveis, templates e evolução controlada.
-              </p>
-            </div>
-
-            <p class="icon-row">
-              <a
-                class="icon-link"
-                href="https://github.com/MeLL-Cognitive-Architecture"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abrir GitHub MeLL Cognitive Architecture"
-              >
-                ↗
-              </a>
-            </p>
-          </article>
-
-          <article class="card link-card contact-card">
-            <div>
-              <span class="tag">LinkedIn</span>
-              <h3>Carreira Profissional</h3>
-              <p>
-                Manutenção Elétrica Industrial — Automação — Indústria 4.0 — IoT — Confiabilidade e Segurança Operacional.
-              </p>
-            </div>
-
-            <p class="icon-row">
-              <a
-                class="icon-link"
-                href="https://www.linkedin.com/in/luizcrezende"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abrir LinkedIn de Luiz Carlos Rezende da Silva"
-              >
-                ↗
-              </a>
-            </p>
-          </article>
+        <div class="actions" aria-label="Links oficiais">
+          <a class="button primary" href="https://mellcognitivearchitecture.com.br" target="_blank" rel="noopener noreferrer">Site institucional</a>
+          <a class="button secondary" href="https://github.com/MeLL-Cognitive-Architecture" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/luizcrezende" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -1096,9 +913,32 @@
     </div>
   </footer>
 
-  <a class="to-top" href="#topo" aria-label="Voltar ao topo">
-    ↑
-    <span class="sr-only">Voltar ao topo</span>
-  </a>
+  <a class="to-top" href="#topo" aria-label="Voltar ao topo">↑</a>
+
+  <script>
+    const menuButton = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('#menu-principal');
+
+    if (menuButton && menu) {
+      const closeMenu = () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menu.dataset.open = 'false';
+      };
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        menu.dataset.open = String(!isOpen);
+      });
+
+      menu.addEventListener('click', (event) => {
+        if (event.target instanceof HTMLAnchorElement) closeMenu();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    }
+  </script>
 </body>
 </html>
