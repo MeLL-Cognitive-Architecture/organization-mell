@@ -55,6 +55,12 @@
           "@type": "Person",
           "name": "Luiz Carlos Rezende da Silva"
         },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Atendimento institucional",
+          "email": "contato@mellcognitivearchitecture.com.br",
+          "availableLanguage": ["pt-BR"]
+        },
         "sameAs": [
           "https://github.com/MeLL-Cognitive-Architecture",
           "https://www.linkedin.com/in/luizcrezende"
@@ -623,6 +629,22 @@
     .footer a { color: var(--accent-2); font-weight: 760; }
     .footer a:hover { color: var(--text); }
 
+    .footer-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.75rem;
+      align-items: center;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    .footer-legal {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
     .to-top {
       position: fixed;
       right: 1.1rem;
@@ -913,12 +935,16 @@
           <h2 id="contato-title">Canais oficiais e documentação técnica.</h2>
           <p>
             Acompanhe a evolução institucional, documentação pública, demonstrações não sensíveis, templates e materiais relacionados à governança cognitiva da MeLL Cognitive Architecture.
+            Para contato institucional: <a href="mailto:contato@mellcognitivearchitecture.com.br">contato@mellcognitivearchitecture.com.br</a>.
           </p>
         </div>
-        <div class="actions" aria-label="Links oficiais">
-          <a class="button primary" href="https://mellcognitivearchitecture.com.br" target="_blank" rel="noopener noreferrer">Site institucional</a>
+        <div class="actions" aria-label="Links oficiais e contato">
+          <a class="button primary" href="mailto:contato@mellcognitivearchitecture.com.br">E-mail institucional</a>
+          <a class="button secondary" href="https://mellcognitivearchitecture.com.br" target="_blank" rel="noopener noreferrer">Site institucional</a>
           <a class="button secondary" href="https://github.com/MeLL-Cognitive-Architecture" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a class="button secondary" href="https://www.linkedin.com/in/luizcrezende" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://mellcognitivearchitecture.com.br/privacypolicy/">Privacidade</a>
+          <a class="button secondary" href="https://mellcognitivearchitecture.com.br/terms/">Termos</a>
         </div>
       </div>
     </section>
@@ -928,6 +954,13 @@
     <div class="container footer-row">
       <span>© 2026 MeLL Cognitive Architecture. Todos os direitos reservados.</span>
       <span>IA aplicada · Governança cognitiva · Autonomia supervisionada</span>
+      <address class="footer-contact" aria-label="Contato institucional e documentos legais">
+        <a href="mailto:contato@mellcognitivearchitecture.com.br">contato@mellcognitivearchitecture.com.br</a>
+        <span class="footer-legal">
+          <a href="https://mellcognitivearchitecture.com.br/privacypolicy/">Política de Privacidade</a>
+          <a href="https://mellcognitivearchitecture.com.br/terms/">Termos de Uso</a>
+        </span>
+      </address>
     </div>
   </footer>
 
