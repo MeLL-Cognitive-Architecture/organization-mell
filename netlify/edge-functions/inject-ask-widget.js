@@ -1,5 +1,4 @@
-const WIDGET_SNIPPET = `
-<script src="/mell-atendimento-widget.js" defer></script>`;
+const WIDGET_SNIPPET = '<script src="/mell-atendimento-widget.js" defer></script>';
 
 export default async function injectAskWidget(request, context) {
   const response = await context.next();
@@ -9,18 +8,11 @@ export default async function injectAskWidget(request, context) {
     return response;
   }
 
-  const html = await response.text();
-
-  if (html.includes("/mell-atendimento-widget.js") || !html.includes("</body>")) {
-    return new Response(html, response);
-  }
-
-  const headers = new Headers(response.headers);
-  headers.delete("content-length");
-
-  return new Response(html.replace("</body>", `${WIDGET_SNIPPET}\n</body>`), {
-    status: response.status,
-    statusText: response.statusText,
-    headers,
-  });
+  return new HTMLRewriter()
+    .on("body", {
+      element(element) {
+        element.append(WIDGET_SNIPPET, { html: true });
+      },
+    })
+    .transform(response);
 }
