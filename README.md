@@ -20,7 +20,7 @@ O atendimento inicial do site é carregado pelo arquivo `public/mell-atendimento
 
 A injeção do script é feita pela Edge Function `netlify/edge-functions/inject-ask-widget.js`, registrada em `netlify.toml`, sem alterar diretamente o HTML das páginas públicas.
 
-O ASK orienta visitantes sobre soluções, CIA-Tec™, ERSC-Core, SovereignGuard / SCGA-Core, demonstração pública, privacidade e encaminhamento institucional por e-mail.
+O ASK orienta visitantes sobre soluções, CIA-Tec™, ERSC-Core, SovereignGuard / SCGA-Core, demonstração pública, privacidade e encaminhamento institucional por e-mail. O widget usa APIs de DOM seguras, com conteúdo textual inserido por `textContent`.
 
 ## Estrutura
 
