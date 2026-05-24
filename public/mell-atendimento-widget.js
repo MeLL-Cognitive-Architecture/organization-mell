@@ -124,7 +124,7 @@
   var sendButton = createElement("button", "mell-ask-send", "Enviar");
   var launcher = createElement("button", "mell-ask-launcher");
   var launcherIcon = createElement("span", "mell-ask-icon", "?");
-  var launcherText = createElement("span", "", "Atendimento");
+  var launcherText = createElement("span", "", "Ask AI MeLL");
 
   panel.setAttribute("role", "dialog");
   panel.setAttribute("aria-modal", "false");
