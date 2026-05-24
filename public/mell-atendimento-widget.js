@@ -1,17 +1,8 @@
 (function () {
   "use strict";
 
-  var currentScript = document.currentScript || {};
-  var config = {
-    contactEmail:
-      currentScript.getAttribute && currentScript.getAttribute("data-contact-email")
-        ? currentScript.getAttribute("data-contact-email")
-        : "contato@mellcognitivearchitecture.com.br",
-    siteUrl:
-      currentScript.getAttribute && currentScript.getAttribute("data-site-url")
-        ? currentScript.getAttribute("data-site-url")
-        : "https://mellcognitivearchitecture.com.br",
-  };
+  var CONTACT_EMAIL = "contato@mellcognitivearchitecture.com.br";
+  var SITE_URL = "https://mellcognitivearchitecture.com.br";
 
   var quickActions = [
     "Soluções",
@@ -63,7 +54,7 @@
       label: "Contato",
       keywords: ["contato", "email", "e-mail", "falar", "atendimento", "comercial"],
       text:
-        "Posso montar uma mensagem de contato com nome, organização, e-mail e necessidade. Depois você confirma o envio pelo seu aplicativo de e-mail.",
+        "Posso montar uma mensagem de contato com nome, organização, e-mail e necessidade. Depois você envia esse resumo pelo e-mail institucional.",
       action: "lead",
     },
   ];
@@ -91,7 +82,7 @@
     ".mell-ask-title{margin:0;font-size:16px;line-height:1.25}.mell-ask-subtitle{margin:5px 0 0;color:#b9c7d9;font-size:13px;line-height:1.4}" +
     ".mell-ask-close{display:grid;width:34px;height:34px;place-items:center;border:1px solid rgba(148,163,184,.24);border-radius:10px;background:rgba(255,255,255,.045);color:#f8fafc;cursor:pointer;font-size:18px}" +
     ".mell-ask-log{display:flex;flex-direction:column;gap:10px;overflow:auto;padding:16px;background:#040914}" +
-    ".mell-ask-message{max-width:91%;border-radius:14px;padding:11px 12px;font-size:14px;line-height:1.48}.mell-ask-bot{align-self:flex-start;border:1px solid rgba(148,163,184,.2);background:rgba(255,255,255,.055);color:#f8fafc}.mell-ask-user{align-self:flex-end;background:#38bdf8;color:#02111f;font-weight:760}" +
+    ".mell-ask-message{max-width:91%;white-space:pre-wrap;border-radius:14px;padding:11px 12px;font-size:14px;line-height:1.48}.mell-ask-bot{align-self:flex-start;border:1px solid rgba(148,163,184,.2);background:rgba(255,255,255,.055);color:#f8fafc}.mell-ask-user{align-self:flex-end;background:#38bdf8;color:#02111f;font-weight:760}" +
     ".mell-ask-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 12px;background:#040914}.mell-ask-chip{border:1px solid rgba(125,211,252,.25);border-radius:999px;background:rgba(56,189,248,.08);color:#7dd3fc;padding:8px 10px;font:inherit;font-size:13px;font-weight:760;cursor:pointer}" +
     ".mell-ask-form{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px;border-top:1px solid rgba(148,163,184,.2);background:#07111f}.mell-ask-input{min-width:0;border:1px solid rgba(148,163,184,.35);border-radius:12px;padding:11px 12px;background:#02060d;color:#f8fafc;font:inherit;font-size:14px}.mell-ask-input::placeholder{color:#8da1bc}.mell-ask-send{border:0;border-radius:12px;background:#38bdf8;color:#02111f;padding:0 14px;font:inherit;font-weight:900;cursor:pointer}" +
     ".mell-ask-note{padding:0 16px 14px;color:#8da1bc;background:#040914;font-size:12px;line-height:1.45}" +
@@ -174,6 +165,24 @@
     addMessage("Para encaminhar ao atendimento humano, informe seu nome.", "bot");
   }
 
+  function renderLeadSummary() {
+    addMessage(
+      "Resumo para contato humano:\n" +
+        "Nome: " +
+        state.lead.nome +
+        "\nOrganização: " +
+        state.lead.organizacao +
+        "\nE-mail: " +
+        state.lead.email +
+        "\nNecessidade: " +
+        state.lead.necessidade +
+        "\nOrigem: ASK de atendimento do site " +
+        SITE_URL,
+      "bot"
+    );
+    addMessage("Envie esse resumo para " + CONTACT_EMAIL + ".", "bot");
+  }
+
   function handleLead(text) {
     var fields = ["nome", "organizacao", "email", "necessidade"];
     var prompts = [
@@ -190,25 +199,7 @@
     }
 
     state.leadMode = false;
-    var subject = encodeURIComponent("Atendimento MeLL Cognitive Architecture");
-    var body = encodeURIComponent(
-      "Nome: " +
-        state.lead.nome +
-        "\nOrganização: " +
-        state.lead.organizacao +
-        "\nE-mail: " +
-        state.lead.email +
-        "\nNecessidade: " +
-        state.lead.necessidade +
-        "\n\nOrigem: ASK de atendimento do site " +
-        config.siteUrl
-    );
-    var mailto = "mailto:" + config.contactEmail + "?subject=" + subject + "&body=" + body;
-    addMessage(
-      "Resumo registrado. Vou abrir seu aplicativo de e-mail para você revisar e confirmar o envio.",
-      "bot"
-    );
-    window.location.href = mailto;
+    renderLeadSummary();
   }
 
   function handleUserText(text) {
