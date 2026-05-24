@@ -1,4 +1,4 @@
-const ASK_WIDGET_SNIPPET = '<script src="/mell-atendimento-widget.js?v=20260524-inline-hero" defer></script>';
+const ASK_WIDGET_SNIPPET = '<script src="/mell-atendimento-widget.js?v=20260524-hero-cta" defer></script>';
 
 export async function onRequest(context) {
   const response = await context.next();
