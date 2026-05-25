@@ -14,8 +14,19 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it **privately** by emailing
+**security@example.com**. If this repository has GitHub private vulnerability reporting
+enabled, you may also use the **Report a vulnerability** feature in the Security tab.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please include:
+- A clear description of the issue and affected versions/components
+- Steps to reproduce or a proof of concept
+- Impact assessment (what an attacker could do)
+- Any suggested mitigations or fixes
+
+We will acknowledge receipt within **3 business days** and provide status updates at
+least every **7 business days** while triaging/remediating.
+
+If the report is accepted, we will work on a fix and coordinate disclosure timing with
+you. If it is declined (for example, out of scope or not reproducible), we will explain
+the decision.
