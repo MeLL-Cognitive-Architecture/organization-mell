@@ -110,11 +110,11 @@
   var panel = createElement("section", "mell-ask-panel");
   var header = createElement("header", "mell-ask-header");
   var headerCopy = createElement("div");
-  var title = createElement("h2", "mell-ask-title", "Atendimento MeLL");
+  var title = createElement("h2", "mell-ask-title", "MeLL IA Assist");
   var subtitle = createElement(
     "p",
     "mell-ask-subtitle",
-    "Orientação inicial sobre arquitetura cognitiva governada."
+    "Chat de atendimento institucional."
   );
   var closeButton = createElement("button", "mell-ask-close", "×");
   var log = createElement("div", "mell-ask-log");
@@ -129,8 +129,7 @@
   var input = createElement("input", "mell-ask-input");
   var sendButton = createElement("button", "mell-ask-send", "Enviar");
   var launcher = createElement("button", "mell-ask-launcher");
-  var launcherIcon = createElement("span", "mell-ask-icon", "?");
-  var launcherText = createElement("span", "", "Ask AI MeLL");
+  var launcherText = createElement("span", "", "MeLL IA Assist");
 
   panel.id = "mell-ask-panel";
   panel.setAttribute("role", "dialog");
@@ -160,7 +159,6 @@
   panel.appendChild(header);
   panel.appendChild(log);
   panel.appendChild(footer);
-  launcher.appendChild(launcherIcon);
   launcher.appendChild(launcherText);
   root.appendChild(panel);
   root.appendChild(launcher);
@@ -211,7 +209,7 @@
       return;
     }
 
-    var trigger = createElement("button", "button ghost mell-ask-inline-trigger", "Ask AI MeLL");
+    var trigger = createElement("button", "button ghost mell-ask-inline-trigger", "MeLL IA Assist");
     var contactLink = actions.querySelector('a[href="#contato"]');
     trigger.type = "button";
     trigger.setAttribute("data-mell-ask-open", "true");
@@ -270,7 +268,7 @@
         state.lead.email +
         "\nNecessidade: " +
         state.lead.necessidade +
-        "\nOrigem: ASK de atendimento do site " +
+        "\nOrigem: MeLL IA Assist do site " +
         SITE_URL,
       "bot"
     );
@@ -351,7 +349,7 @@
   installInlineTrigger();
   renderChips();
   addMessage(
-    "Olá. Sou o ASK de atendimento da MeLL. Posso orientar sobre soluções, CIA-Tec, ERSC-Core, SovereignGuard, demonstração pública e contato institucional.",
+    "Olá. Sou o MeLL IA Assist, chat de atendimento da MeLL. Posso orientar sobre soluções, CIA-Tec, ERSC-Core, SovereignGuard, demonstração pública e contato institucional.",
     "bot"
   );
 })();

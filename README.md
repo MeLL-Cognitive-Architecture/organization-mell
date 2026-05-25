@@ -14,13 +14,13 @@ Esta versão ajusta o site público para coerência com a tipologia CIA-Tec™ s
 - **SovereignGuard / SCGA-Core** — módulo especializado de governança ativa.
 - **GPTs, apps e assistentes** — interfaces governadas.
 
-## ASK de atendimento
+## MeLL IA Assist
 
-O atendimento inicial do site é carregado pelo arquivo `public/mell-atendimento-widget.js`.
+O chat de atendimento inicial do site é carregado pelo arquivo `public/mell-atendimento-widget.js`.
 
-A injeção do script é feita pela Edge Function `netlify/edge-functions/inject-ask-widget.js`, registrada em `netlify.toml`, sem alterar diretamente o HTML das páginas públicas.
+A injeção do script em produção Cloudflare Pages é feita por `functions/_middleware.js`. O projeto também mantém a Edge Function `netlify/edge-functions/inject-ask-widget.js` para compatibilidade com a estrutura anterior.
 
-O ASK orienta visitantes sobre soluções, CIA-Tec™, ERSC-Core, SovereignGuard / SCGA-Core, demonstração pública, privacidade e encaminhamento institucional por e-mail. O widget usa APIs de DOM seguras, com conteúdo textual inserido por `textContent`.
+O MeLL IA Assist orienta visitantes sobre soluções, CIA-Tec™, ERSC-Core, SovereignGuard / SCGA-Core, demonstração pública, privacidade e encaminhamento institucional por e-mail. O widget usa APIs de DOM seguras, com conteúdo textual inserido por `textContent`.
 
 ## Estrutura
 
