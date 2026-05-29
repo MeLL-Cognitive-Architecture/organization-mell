@@ -12,7 +12,7 @@
    - `Framework CIA-Tec™` como modelo estruturante.
    - `DataCore` como Data Layer.
    - `ERSC-Core` como plataforma operacional.
-   - `SovereignGuard / SCGA-Core` como módulo especializado.
+   - `SCGA-Core` como módulo especializado.
    - Interfaces e assistentes como interfaces governadas.
 
 3. Exposição pública
