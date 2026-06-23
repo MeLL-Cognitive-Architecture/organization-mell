@@ -1,0 +1,31 @@
+[build]
+  publish = "public"
+  functions = "functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/docs/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Cache-Control = "public, max-age=3600"
+
+[[edge_functions]]
+  path = "/*"
+  function = "inject-ask-widget"
+
+[[redirects]]
+  from = "/privacypolicy"
+  to = "/privacypolicy/"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms/"
+  status = 301
